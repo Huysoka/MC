@@ -1,5 +1,5 @@
 <?php
-require 'path/to/PHPMailer/PHPMailer.php'; // Stellen Sie sicher, dass Sie den richtigen Pfad zu PHPMailer angeben
+require 'MC\vendor\phpmailer\phpmailer';
 
 $name = $_POST['name'];
 $visitor_email = $_POST['email'];
