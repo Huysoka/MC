@@ -18,7 +18,7 @@ try {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $email_from = 'info@mcänderungsschneiderei-berlin.de';
+    $email_from = 'info@x--mcnderungsschneiderei-berlin-6mc.de';
     $email_subject = "New Form Submission";
     $email_body =   "User Name: $name.\n".
                     "User Email: $visitor_email.\n".
@@ -31,10 +31,9 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.ionos.de'; // IONOS SMTP-Server
     $mail->SMTPAuth = true;
-    $mail->Username = 'info@mcänderungsschneiderei-berlin.de'; // Ihr IONOS-Benutzername
+    $mail->Username = 'info@x--mcnderungsschneiderei-berlin-6mc.de'; // Ihr IONOS-Benutzername
     $mail->Password = 'Huyonweed12345!'; // Ihr IONOS-Passwort
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port = 587; // Port für TLS
 
     $mail->setFrom($email_from);
