@@ -1,5 +1,8 @@
 <?php
-require 'MC\vendor\phpmailer\phpmailer';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+require 'vendor/autoload.php'; // Stellen Sie sicher, dass der Pfad korrekt ist
 
 $name = $_POST['name'];
 $visitor_email = $_POST['email'];
@@ -17,11 +20,12 @@ $to = "huy454957@gmail.com";
 
 $mail = new PHPMailer(true);
 $mail->isSMTP();
-$mail->Host = 'smtp.ionos.com'; // IONOS SMTP-Server
+$mail->Host = 'smtp.ionos.de'; // IONOS SMTP-Server
 $mail->SMTPAuth = true;
 $mail->Username = 'info@mcänderungsschneiderei-berlin.de'; // Ihr IONOS-Benutzername
 $mail->Password = 'Huyonweed12345!'; // Ihr IONOS-Passwort
-$mail->SMTPSecure = 'tls'; // Verwenden Sie 'tls' oder 'ssl' je nach IONOS-Einstellungen
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 $mail->Port = 587; // Port für TLS
 
 $mail->setFrom($email_from);
