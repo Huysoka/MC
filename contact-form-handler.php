@@ -2,7 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-require 'vendor/autoload.php'; // Stellen Sie sicher, dass der Pfad korrekt ist
+require 'vendor/phpmailer/phpmailer'; // Stellen Sie sicher, dass der Pfad korrekt ist
 
 try {
      // Instanz der PHPMailer-Klasse erstellen
